@@ -1,0 +1,390 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: "Roboto", sans-serif;
+}
+
+/* Navigation */
+
+.nav-container{
+  background: #FFFFFF;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  height: 52px;
+  margin-top: -35px;
+  z-index: 500;
+  position: relative;
+}
+
+.wrapper{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 52px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav .logo{
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  color: #000000;
+}
+
+.nav-items li{
+  list-style: none;
+  margin-right: 35px;
+  padding-top: 10px;
+}
+
+.nav-items li:nth-last-of-type(1){
+  margin: 0;
+}
+
+.nav-items li a{
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color: #000000;
+  transition: 300ms;
+}
+
+.nav-items li a:hover{
+  color: #779DFF;
+}
+
+/* Header */
+
+.header-container{
+  /* background: #779DFF; */
+  height: calc(100vh - 52px);
+  display: flex;
+  align-items: center;
+  background-image: url('images/background1.jpg');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1{
+  font-family: "Poppins", sans-serif;
+  font-size: 50px;
+  color: white;
+}
+
+header p{
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+    color: white;
+}
+
+.social-icons .learn-btn{
+  background-color: whitesmoke;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  text-emphasis: 50px;
+  padding: 15px;
+  margin-top: 25px;
+  display: block;
+  transition: 300ms;
+}
+
+.social-icons .learn-btn:hover{
+  background-color: rgba(0,0,0,0);
+  color: whitesmoke;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  text-emphasis: 50px;
+  padding: 15px;
+  margin-top: 25px;
+  display: block;
+  transition: 300ms;
+}
+/* social icons */
+
+.social-icons{
+  display: flex;
+  align-items: center;
+}
+
+.social-icons a {
+  margin: 0 24px;
+}
+
+.social-icons a:nth-last-of-type(1){
+  margin-left: 0;
+}
+
+/* hero image */
+
+header .hero-image{
+  position: relative;
+}
+
+header .hero-image img{
+  transition: 300ms;
+  position: relative;
+  z-index: 100;
+}
+
+header .hero-image img:hover{
+  transform: rotate(-10deg);
+}
+
+header .hero-image .photo-bg {
+  position: absolute;
+  width: 340px;
+  height: 340px;
+  left: 0px;
+  top: 0;
+  background: #FFFFFF;
+  transform: rotate(-10deg);
+}
+
+/* search box */
+
+.search-box{
+  width: 1000px;
+  margin: 0 auto;
+  text-align: right;
+  position: relative;
+  top: 0;
+  transform: translateY(-10);
+  transition: 300ms;
+}
+
+.search-box input {
+  width: 375px;
+  height: 35px;
+  font-size: 16px;
+  line-height: 42px;
+  border: none;
+  padding: 12px 12px;
+  border-radius: 0 0 5px 5px;
+}
+
+
+.search-box input::placeholder{
+  color: #b3b3b3;
+}
+
+.search-box.active{
+  top: 52px;
+  transform: translateY(0);
+}
+
+/* search & close button */
+
+.nav-btn-container{
+  display: flex;
+  position: relative;
+}
+
+.nav-btn-container img{
+  position: absolute;
+}
+
+.nav-btn-container .close-btn{
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10);
+  transition: 300ms;
+}
+
+.nav-btn-container .search-btn{
+  pointer-events: auto;
+  transition: 300ms;
+}
+
+.nav-btn-container.active .search-btn{
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10);
+}
+
+.nav-btn-container.active .close-btn{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* gallery */
+
+.gallery-container{
+  margin-top: 20px;
+}
+.wrapper-gallery{
+  width: 1000px;
+  height: 100%;
+  display: flex;
+  margin: auto;
+}
+
+.photo-gallery{
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+}
+
+ .row {
+  margin-left: 10px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+ } 
+
+/* Create two equal columns that sits next to each other */
+ .column {
+  flex: 50%;
+  padding: 0 4px;
+} 
+
+.photo-box{
+  margin-top: 4px;
+  max-width: 49.5%;
+  vertical-align: middle;
+  border-radius: 5px;
+  transition: 300ms;
+  display: inline-block;
+  position: relative;
+}
+
+.photo-box .after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  color: #FFF;
+  transition: 300ms;
+  border-radius: 5px;
+}
+
+.photo-box:hover .after {
+  display: block;
+  background: rgba(0, 0, 0, .6);
+  border-radius: 5px;
+}
+
+.photo-box:hover .after img{
+  position: absolute;
+  top: 40%;
+}
+
+.column img {
+  width: 300px;
+  max-width: 100%;
+  height: 300px;
+  max-height: 25%;
+  vertical-align: middle;
+  border-radius: 5px;
+  background-size: cover;
+  transition: 300ms;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+/* button to top */
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 4px;
+  background: url('images/totop_arrow.svg');
+  background-size: cover;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+/* about section */
+
+.about-container{
+  margin-top: 100px;
+  height: 100vh;
+  /* The image used */
+  background-image: url('images/matthew-smith-Rfflri94rs8-unsplash.jpg');
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wrapper-about{
+  padding-top: 20px;
+  width: 1000px;
+  height: 100%;
+  display: flex;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.photo-about{
+  margin-top: 4px;
+  width: 1000px;
+  vertical-align: middle;
+  border-radius: 5px;
+  transition: 300ms;
+  display: inline-block;
+  position: relative;
+  background-color: #343a40; 
+  padding: 20px; 
+  margin-left: 5px;
+}
+
+
